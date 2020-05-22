@@ -8,11 +8,11 @@ module.exports = (app) => {
     app.get('/users', users.findAll);
 
     // Retrieve a single User with projectId
-    app.get('/users/:projectId', users.findOne);
+    app.get('/users/:userId', users.findOne);
 
     // Update a User with projectId
-    app.put('/users/:projectId', users.update);
+    app.put('/users/:userId', users.update);
 
     // Delete a User with projectId
-    app.delete('/users/:projectId', users.delete);
+    app.delete('/users/:userId', users.delete);
 }

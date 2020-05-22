@@ -28,8 +28,6 @@ exports.create = (req, res) => {
 
 // Retrieve and return all projects from the database.
 exports.findAll = (req, res) => {
-    console.log({req})
-    console.log({res});
     Project.find()
     .then(projects => {
         res.send(projects);

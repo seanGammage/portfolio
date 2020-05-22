@@ -12,7 +12,8 @@ exports.create = (req, res) => {
 
     // Create a User
     const user = new User({
-        firstName: req.body.firstName || "UnfirstNamed User", 
+        firstName: req.body.firstName || "booo", 
+        lastName: req.body.lastName || "booooooo"
     });
 
     // Save User in the database
@@ -28,8 +29,6 @@ exports.create = (req, res) => {
 
 // Retrieve and return all users from the database.
 exports.findAll = (req, res) => {
-    console.log({req})
-    console.log({res});
     User.find()
     .then(users => {
         res.send(users);
