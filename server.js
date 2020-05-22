@@ -31,8 +31,11 @@ app.get('/', (req, res) => {
     res.json({"message": "This is the home page."});
 });
 
-// Require NotProjectses routes
+// Require Project routes
 require('./app/routes/ProjectRoutes.js')(app);
+
+// Require User routes
+require('./app/routes/UserRoutes.js')(app);
 
 // listen for requests
 app.listen(3000, () => {
