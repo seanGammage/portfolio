@@ -1,2 +1,7 @@
-# portfolio
-This is my personal portfolio to show my experiance.
+# Portfolio
+
+## About / Synopsis
+* This is a personal portfolio I created for showing experience and telling the viewer about myself.
+## Table of contents
+
+## Instalation
