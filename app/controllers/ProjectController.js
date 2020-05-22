@@ -13,6 +13,9 @@ exports.create = (req, res) => {
     // Create a Project
     const project = new Project({
         title: req.body.title || "Untitled Project", 
+        subTitle: req.body.subTitle,
+        types: req.body.types,
+        clicks: req.body.clicks
     });
 
     // Save Project in the database
@@ -72,6 +75,9 @@ exports.update = (req, res) => {
     // Find project and update it with the request body
     Project.findByIdAndUpdate(req.params.projectId, {
         title: req.body.title || "Untitled Project",
+        subTitle: req.body.subTitle,
+        types: req.body.types,
+        clicks: req.body.clicks
     }, {new: true})
     .then(project => {
         if(!project) {
